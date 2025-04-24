@@ -1,54 +1,112 @@
-
-
-:root {
-    --cor-primaria: #FF1493 ;
-    --cor-secundari: #d18681;
-    --cor-terceiaria: #acbfb7;
-    --cor-quaternaria: #f6ebdd;
-    --cor-quintearia: #8e6d86;
-
-    font-family: "Cal Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-body{
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #ffe6f2;
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 30px;
-
+    height: 100vh;
 }
 
-.lista{
-    text-align: center;
-    padding: 30px;
-    background-color: var(--cor-quaternaria);
-    height: 100%;
-    width: 50%;
-    border: 4px solid var(--cor-primaria);
-}
-
-.titulo{
-    font-size: 40px;
-    color: var(--cor-secundari);
-}
-
-.ul{
-    border: 4px solid var(--cor-secundari);
+.todo-container {
+    background: #ffffff;
     padding: 20px;
-    border-radius: 16px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    border: 2px solid #ffb3d9;
 }
 
-.li{
+h1 {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff66b3;
+}
+
+.todo-input {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ffb3d9;
+    border-radius: 10px;
+    background-color: #fff0f5;
+    font-size: 16px;
+    color: #ff66b3;
+}
+
+.add-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff66b3;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.add-button:hover {
+    background-color: #ff3385;
+}
+
+ul {
     list-style: none;
-    font-size: 30px;
-    border: 2px solid var(--cor-quintearia);
-    padding: 15px;
-    margin: 10px;
+    padding: 0;
+}
+
+li {
+    background: #fff0f5;
+    margin-bottom: 10px;
+    padding: 10px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    border-radius: 16px;
-    color: var(--cor-quintearia);
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #ffb3d9;
+}
+
+.task-text {
+    font-size: 16px;
+    color: #ff66b3;
+    flex-grow: 1;
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+    color: #b3b3b3;
+}
+
+.complete-button {
+    background-color: #66cc66;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.complete-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
 }
