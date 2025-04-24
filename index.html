@@ -3,55 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tarefas - Estilo Feminino</title>
+    <title>LIsta de Tarefas</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="todo-container">
-        <h1>🌸 Minha Lista de Tarefas 🌸</h1>
-        <input type="text" class="todo-input" placeholder="Adicione uma tarefa" id="taskInput">
-        <button class="add-button" onclick="addTask()">Adicionar</button>
-        <ul id="taskList">
-            <!-- Tarefas aparecerão aqui -->
+    <section class="lista">
+        <h1 class="titulo">Lista De Tarefas</h1>
+
+        <ul class="ul">
+            <li class="li">Fazer Tarefa de Casa <input type="checkbox" class="input" name="" id=""></li>
+            <li class="li">Limpar a Casa <input type="checkbox" class="input" name="" id=""></li>
+            <li class="li">Fazer o Cafe <input type="checkbox" class="input" name="" id=""></li>
+            <li class="li">Arrumar a Televisao <input type="checkbox" class="input" name="" id=""></li>
+            <li class="li">Instalar o Word no computador da Vo <input type="checkbox" class="input" name="" id=""></li>
+            <li class="li">Fazer o Site do Igor <input type="checkbox" class="input" name="" id=""></li>
         </ul>
-    </div>
-
-    <script>
-        function addTask() {
-            const taskInput = document.getElementById('taskInput');
-            const taskList = document.getElementById('taskList');
-
-            if (taskInput.value.trim() !== "") {
-                const li = document.createElement('li');
-                li.innerHTML = `
-                    <span class="task-text">${taskInput.value}</span>
-                    <button class="complete-button" onclick="completeTask(this)">Concluir</button>
-                    <button class="delete-button" onclick="deleteTask(this)">Remover</button>
-                `;
-                taskList.appendChild(li);
-                taskInput.value = "";
-            }
-        }
-
-        function deleteTask(button) {
-            const li = button.parentElement;
-            li.remove();
-        }
-
-        function completeTask(button) {
-            const li = button.parentElement;
-            const taskText = li.querySelector('.task-text');
-
-            if (taskText.classList.contains('completed')) {
-                // Desfazer conclusão
-                taskText.classList.remove('completed');
-                button.textContent = "Concluir";
-            } else {
-                // Marcar como concluída
-                taskText.classList.add('completed');
-                button.textContent = "Desfazer";
-            }
-        }
-    </script>
+    </section>
 </body>
 </html>
